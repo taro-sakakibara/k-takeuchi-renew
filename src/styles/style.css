@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Sans CJK JP'), local('NotoSansCJKjp-Regular'),
+    local('NotoSansJP-Regular'),
+    url('/fonts/notosans-regular.woff2') format('woff2'),
+    url('/fonts/notosans-regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Noto Sans CJK JP'), local('NotoSansCJKjp-Bold'),
+    local('NotoSansJP-Bold'), url('/fonts/notosans-bold.woff2') format('woff2'),
+    url('/fonts/notosans-bold.woff') format('woff');
+}
+@tailwind base;
+@import './variables.css';
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  body {
+    @apply text-base font-body;
+  }
+}

@@ -3,7 +3,7 @@ import tw, { styled } from 'twin.macro'
 
 const Test = styled.h1`
   ${tw`
-	text-[12px] font-bold text-gray-50
+	font-bold
 `}
 `
 

@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import { GlobalStyles, css } from 'twin.macro'
-import { Global } from '@emotion/react'
+// import { GlobalStyles, css } from 'twin.macro'
+// import { Global } from '@emotion/react'
 import { AppProps } from 'next/app'
+import '../styles/style.css'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
@@ -11,24 +12,23 @@ const App = ({ Component, pageProps }: AppProps) => (
       </title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <GlobalStyles />
-    <Global styles={globalStyles} />
+    {/* <GlobalStyles /> */}
+    {/* <Global styles={globalStyles} /> */}
     <Component {...pageProps} />
   </>
 )
 
-const globalStyles = css`
-  html,
-  body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
-
-  * {
-    box-sizing: border-box;
-  }
-`
+// const globalStyles = css`
+//   html,
+//   body {
+//     padding: 0;
+//     margin: 0;
+//     font-family: 'Noto Sans', sans-serif;
+// 		font-size: 1.6rem
+//   }
+//   * {
+//     box-sizing: border-box;
+//   }
+// `
 
 export default App
