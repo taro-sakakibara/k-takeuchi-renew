@@ -1,7 +1,6 @@
 module.exports = {
-  mode: 'jit',
   purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  // darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       body: ['Noto Sans', 'sans-serif'],
@@ -29,9 +28,19 @@ module.exports = {
       baseSize: 'var(--base-text)', //1.6rem
       small: 'var(--small-text)', //1.2rem
     },
+    extend: {
+      backgroundImage: () => ({
+        mv: "url('/mv.png')",
+      }),
+      lineHeight: {
+        text: 'var(--leading-text)',
+        heading: 'var(--leading-head)',
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
+  mode: 'jit',
 }
