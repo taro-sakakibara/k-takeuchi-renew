@@ -1,0 +1,134 @@
+html {
+  font-size: 62.5%;
+  overflow-y: auto;
+  height: 100%;
+  background-color: #fff;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  text-rendering: optimizeLegibility;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+ul,
+ol,
+th,
+td,
+button,
+figure,
+input,
+textarea,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+select {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+img,
+input,
+button,
+textarea {
+  border: none;
+  -webkit-appearance: none;
+}
+input {
+  text-align: inherit;
+}
+textarea {
+  resize: none;
+}
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+button,
+option,
+textarea,
+optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  color: inherit;
+  /*outline: none;*/
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+button,
+input[type='submit'],
+input[type='button'] {
+  cursor: pointer;
+}
+
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #999;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #999;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999;
+}
+
+template {
+  display: none;
+}
