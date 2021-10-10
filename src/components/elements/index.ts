@@ -1,2 +1,2 @@
-export { ScrollDown } from './ScrollDown'
+export { ScrollDown } from './header/ScrollDown'
 export { CopyRight } from './CopyRight'

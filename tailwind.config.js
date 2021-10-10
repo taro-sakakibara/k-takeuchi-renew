@@ -28,6 +28,17 @@ module.exports = {
       baseSize: 'var(--base-text)', //1.6rem
       small: 'var(--small-text)', //1.2rem
     },
+    zIndex: {
+      header1: 1,
+      header2: 2,
+      header3: 3,
+    },
+    screens: {
+      sp: { max: '768px' },
+      md: { min: '769px' },
+      lg: { min: '1025px' },
+      xl: { min: '1201px' },
+    },
     animation: {
       downPointer:
         'downPointer 2s cubic-bezier(0.29, 0.68, 0.69, 0.31) infinite',
@@ -37,7 +48,7 @@ module.exports = {
         '0%': { opacity: '0' },
         '40%': { opacity: '1' },
         '80%': {
-          top: 'calc(120/750*100vw)',
+          bottom: '0',
           opacity: '0',
         },
         '100%': { opacity: '0' },
@@ -46,6 +57,7 @@ module.exports = {
     extend: {
       backgroundImage: () => ({
         mv: "url('/mv.png')",
+        mvPc: "url('/mv-pc.png')",
         hashtag: "url('/ico_sharp.svg')",
       }),
       lineHeight: {
