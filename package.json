@@ -37,7 +37,9 @@
     "@emotion/styled": "^11.1.5",
     "next": "latest",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "tailwindcss-writing-mode": "^1.0.0",
+    "use-media": "^1.4.0"
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.2.0",
@@ -59,8 +61,8 @@
     "lint-staged": "^10.0.10",
     "postcss": "^8.2.8",
     "prettier": "^2.0.2",
-    "twin.macro": "^2.3.1",
     "tailwindcss": "2.2.7",
+    "twin.macro": "^2.3.1",
     "typescript": "^4.1.3"
   }
 }
