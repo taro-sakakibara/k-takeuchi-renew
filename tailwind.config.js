@@ -28,9 +28,25 @@ module.exports = {
       baseSize: 'var(--base-text)', //1.6rem
       small: 'var(--small-text)', //1.2rem
     },
+    animation: {
+      downPointer:
+        'downPointer 2s cubic-bezier(0.29, 0.68, 0.69, 0.31) infinite',
+    },
+    keyframes: {
+      downPointer: {
+        '0%': { opacity: '0' },
+        '40%': { opacity: '1' },
+        '80%': {
+          top: 'calc(120/750*100vw)',
+          opacity: '0',
+        },
+        '100%': { opacity: '0' },
+      },
+    },
     extend: {
       backgroundImage: () => ({
         mv: "url('/mv.png')",
+        hashtag: "url('/ico_sharp.svg')",
       }),
       lineHeight: {
         text: 'var(--leading-text)',
@@ -41,6 +57,11 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-writing-mode')({
+      variants: ['responsive', 'hover'],
+    }),
+  ],
+
   mode: 'jit',
 }
