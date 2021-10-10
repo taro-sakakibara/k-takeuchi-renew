@@ -10,7 +10,7 @@
   --small-text: 1.2rem;
 
   /* heading */
-  --h1: 3.5rem;
+  --h1: calc((70 / 750) * 100vw);
   --h2: 1.2rem;
   --h3: 2rem;
 
