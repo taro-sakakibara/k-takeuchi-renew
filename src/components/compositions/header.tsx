@@ -71,7 +71,7 @@ const HeadingSvg = styled.span`
 	block
 
 	sp:w-[calc(440/750*100vw)]
-	md:(w-[calc(260/1400*100vw)] mr-[1.4rem])
+	md:(w-[260px] mr-[1.4rem])
 	`}
 `
 
