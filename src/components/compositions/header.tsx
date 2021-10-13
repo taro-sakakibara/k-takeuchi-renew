@@ -1,6 +1,8 @@
 import tw, { styled } from 'twin.macro'
 import { ScrollDown, CopyRight } from '@/elements/index'
+import { Burger } from '@/modules/index'
 import { useMedia } from 'use-media'
+import { useState } from 'react'
 
 // tag
 const TagList = styled.ul`
@@ -102,10 +104,12 @@ md:(flex flex-col justify-between items-center h-[465px] right-[35px])
 
 export const Header: React.FC = () => {
   const isWide = useMedia({ minWidth: '769px' })
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <HeaderWrapper>
       <Inner>
+        <Burger isOpen={isOpen} setIsOpen={setIsOpen} />
         <HeadingWrapper>
           <Heading>
             <HeadingSvg>
