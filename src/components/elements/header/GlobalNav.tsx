@@ -2,26 +2,37 @@ import tw, { styled } from 'twin.macro'
 import Scroll from 'react-scroll'
 // import { Scroll } from 'react-scroll'
 
-const ListWrapper = styled.ul`
+const NavWrapper = styled.nav`
   ${tw`
-flex justify-between right-0
+right-0 text-right
 md:(
-	absolute bg-white py-[40px]
+	 bg-white pr-[35px]
 	)
 sp:(
 	w-[calc(690/750*100vw)]
-	fixed flex-col h-[100vh] bg-deepGray opacity-[96%]
-	pt-[23vh] pr-[4.6vw] pb-[20vh]
+	fixed h-[100vh] bg-deepGray opacity-[96%]
 	z-top
 )
 `}
 `
 
-const ListItem = styled.div`
+const ListWrapper = styled.ul`
+  ${tw`
+inline-flex h-full
+md:(
+	py-[40px]
+	)
+sp:(
+	flex-col justify-center pr-[4.6vw]
+)
+`}
+`
+
+const ListItem = styled.li`
   ${tw`
 font-en
-md:(text-baseSize text-base)
-sp:(text-large text-white text-right ml-auto)
+md:(text-baseSize text-base ml-[65px] first:ml-0)
+sp:(text-large text-white text-right mt-[calc(120/750*100vw)] first:mt-0)
 `}
 `
 export const GlobalNav: React.FC = () => {
@@ -41,6 +52,10 @@ export const GlobalNav: React.FC = () => {
     </ListItem>
   ))
 
-  return <ListWrapper>{items}</ListWrapper>
+  return (
+    <NavWrapper>
+      <ListWrapper>{items}</ListWrapper>
+    </NavWrapper>
+  )
 }
 export default GlobalNav
