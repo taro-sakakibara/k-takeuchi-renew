@@ -1,6 +1,7 @@
 import tw, { styled } from 'twin.macro'
-import { ScrollDown, CopyRight } from '@/elements/index'
+import { ScrollDown, CopyRight, GlobalNav } from '@/elements/index'
 import { useMedia } from 'use-media'
+import Scroll from 'react-scroll'
 
 // tag
 const TagList = styled.ul`
@@ -96,7 +97,7 @@ md:(bg-no-repeat bg-contain bg-mvPc)
 const ScrollDownWrapper = styled.div`
   ${tw`
 absolute right-[10px] bottom-[50px]
-md:(flex flex-col justify-between items-center h-[465px] right-[35px])
+md:(flex flex-col justify-between items-center h-[465px] right-[35px] bottom-[-60px])
 `}
 `
 
@@ -104,38 +105,45 @@ export const Header: React.FC = () => {
   const isWide = useMedia({ minWidth: '769px' })
 
   return (
-    <HeaderWrapper>
-      <Inner>
-        <HeadingWrapper>
-          <Heading>
-            <HeadingSvg>
-              <img src="/header01.svg" />
-            </HeadingSvg>
-            <HeadingText>
-              プライベート
-              <br className="md:hidden" />
-              ギターレッスン。
-            </HeadingText>
-          </Heading>
-        </HeadingWrapper>
-        <HeaderBg />
-        <TagList>
-          <TagItem>現役ミュージシャンが担当。</TagItem>
-          <TagItem>全国展開の大手音楽教室経験。</TagItem>
-          <TagItem>100名以上の指導経験。</TagItem>
-        </TagList>
-      </Inner>
-      <ScrollDownWrapper>
-        {isWide ? (
-          <>
-            <CopyRight textVertical />
+    <>
+      <HeaderWrapper>
+        <GlobalNav />
+        <Inner>
+          <HeadingWrapper>
+            <Heading>
+              <HeadingSvg>
+                <img src="/header01.svg" />
+              </HeadingSvg>
+              <HeadingText>
+                プライベート
+                <br className="md:hidden" />
+                ギターレッスン。
+              </HeadingText>
+            </Heading>
+          </HeadingWrapper>
+          <HeaderBg />
+          <TagList>
+            <TagItem>現役ミュージシャンが担当。</TagItem>
+            <TagItem>全国展開の大手音楽教室経験。</TagItem>
+            <TagItem>100名以上の指導経験。</TagItem>
+          </TagList>
+        </Inner>
+        <ScrollDownWrapper>
+          {isWide ? (
+            <>
+              <CopyRight textVertical />
+              <ScrollDown />
+            </>
+          ) : (
             <ScrollDown />
-          </>
-        ) : (
-          <ScrollDown />
-        )}
-      </ScrollDownWrapper>
-    </HeaderWrapper>
+          )}
+        </ScrollDownWrapper>
+      </HeaderWrapper>
+      <Scroll.Element
+        className="w-[100px] h-[100px] bg-black mt-[300px]"
+        name="concept"
+      ></Scroll.Element>
+    </>
   )
 }
 
