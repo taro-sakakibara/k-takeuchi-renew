@@ -18,6 +18,9 @@ module.exports = {
       base: '#333333',
       white: '#FFFFFF',
     },
+    borderColor: {
+      transparentWhite: 'rgba(255,255,255,0.25)',
+    },
     fontSize: {
       //spでの参照サイズ
       h1: 'var(--h1)', //3.5rem

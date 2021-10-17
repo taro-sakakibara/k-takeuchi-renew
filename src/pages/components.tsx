@@ -3,7 +3,10 @@ import {
   Heading3,
   NumberingHeading,
   Heading2WithIcon,
+  Circle,
+  RightArrow,
 } from '@/elements/index'
+import { ContactButton } from '@/modules/index'
 
 export const Components = () => (
   <>
@@ -28,6 +31,10 @@ export const Components = () => (
         </>
       }
     />
+    <Circle>
+      <RightArrow />
+    </Circle>
+    <ContactButton href={''} text={'お問い合わせはこちら'} />
   </>
 )
 

@@ -6,7 +6,7 @@
   /* font-size */
   --large-text: 2.4rem;
   --medium-text: 1.8rem;
-  --base-text: 1.6rem;
+  --base-text: calc((32 / 750) * 100vw);
   --small-text: 1.2rem;
 
   /* heading */

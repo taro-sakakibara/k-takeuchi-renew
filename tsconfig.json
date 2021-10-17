@@ -17,9 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@/elements/*": ["src/components/elements/*"],
-      "@/modules/*": ["src/components/modules/index"],
-      "@/compositions/*": ["src/components/compositions/index"],
-      "@/templates/*": ["src/components/templates/index"],
+      "@/modules/*": ["src/components/modules/*"],
+      "@/compositions/*": ["src/components/compositions/*"],
+      "@/templates/*": ["src/components/templates/*"],
       "~/*": ["src/*"]
     }
   },
