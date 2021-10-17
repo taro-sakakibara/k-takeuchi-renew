@@ -1,7 +1,7 @@
 import tw, { styled } from 'twin.macro'
 
 interface Props {
-  textVertical: boolean
+  isVertical?: boolean
 }
 const Text = styled.p`
   ${tw`
@@ -10,8 +10,8 @@ text-small opacity-50 font-en
 `}
 `
 
-export const CopyRight: React.FC<Props> = (textVertical) => {
-  const vertical = textVertical
+export const CopyRight: React.FC<Props> = (isVertical) => {
+  const vertical = isVertical
     ? // rotate-180がなんか微妙。。
       'writing-mode-vertical-lr transform rotate-180'
     : 'writing-mode-horizontal-tb'

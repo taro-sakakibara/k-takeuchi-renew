@@ -128,7 +128,7 @@ export const Header: React.FC = () => {
       <ScrollDownWrapper>
         {isWide ? (
           <>
-            <CopyRight textVertical />
+            <CopyRight isVertical />
             <ScrollDown />
           </>
         ) : (
