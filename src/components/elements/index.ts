@@ -1,3 +1,5 @@
 export { ScrollDown } from './header/ScrollDown'
 export { CopyRight } from './CopyRight'
-export { HeadingWithNum } from './heading/HeadingWithNum'
+export { Heading2 } from './heading/Heading2'
+export { Heading3 } from './heading/Heading3'
+export { NumberingHeading } from './heading/NumberingHeading'
