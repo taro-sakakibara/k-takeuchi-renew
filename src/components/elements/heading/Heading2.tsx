@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro'
 
 interface Props {
   number: string
-  title: string
+  title: string | JSX.Element
 }
 
 const Wrapper = styled.h2`
