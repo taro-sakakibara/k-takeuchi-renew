@@ -11,8 +11,8 @@
 
   /* heading */
   --h1: calc((70 / 750) * 100vw);
-  --h2: 1.2rem;
-  --h3: 2rem;
+  --h2: calc((24 / 750) * 100vw);
+  --h3: calc((40 / 750) * 100vw);
 
   /* line-height */
   --leading-head: 1.5;
