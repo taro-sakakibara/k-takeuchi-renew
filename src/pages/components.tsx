@@ -5,6 +5,7 @@ import {
   Heading2WithIcon,
   Circle,
   RightArrow,
+  Note,
 } from '@/elements/index'
 import { ContactButton, OrderButton } from '@/modules/index'
 
@@ -40,6 +41,11 @@ export const Components = () => (
       number={'A'}
       numberOfPrice={'8,000'}
       text={'60分×月3回'}
+    />
+    <Note
+      text={
+        '入会金や手数料は一切かかりません。レッスンの内容に沿っておすすめの教則本など市販のものをご紹介させていただくことはあります。'
+      }
     />
   </>
 )

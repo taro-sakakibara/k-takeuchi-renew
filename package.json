@@ -38,6 +38,7 @@
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "tailwindcss-typography": "^3.1.0",
     "tailwindcss-writing-mode": "^1.0.0",
     "use-media": "^1.4.0"
   },

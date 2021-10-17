@@ -31,6 +31,12 @@ module.exports = {
       baseSize: 'var(--base-text)', //1.6rem
       small: 'var(--small-text)', //1.2rem
     },
+    textIndent: {
+      1: 'var(--indent-base)',
+    },
+    padding: {
+      indent1: 'var(--negative-base)',
+    },
     zIndex: {
       header1: 1,
       header2: 2,
@@ -75,6 +81,14 @@ module.exports = {
   plugins: [
     require('tailwindcss-writing-mode')({
       variants: ['responsive', 'hover'],
+    }),
+    require('tailwindcss-typography')({
+      // all these options default to the values specified here
+      ellipsis: true, // whether to generate ellipsis utilities
+      hyphens: true, // whether to generate hyphenation utilities
+      kerning: true, // whether to generate kerning utilities
+      textUnset: true, // whether to generate utilities to unset text properties
+      componentPrefix: 'c-', // the prefix to use for text style classes
     }),
   ],
 
