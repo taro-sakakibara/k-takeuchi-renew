@@ -37,9 +37,9 @@ export const Components = () => (
     <ContactButton href={''} text={'お問い合わせはこちら'} />
     <OrderButton
       href={''}
-      Number={'A'}
-      NumberOfPrice={'8,000'}
-      DetailText={'60分×月3回'}
+      number={'A'}
+      numberOfPrice={'8,000'}
+      text={'60分×月3回'}
     />
   </>
 )

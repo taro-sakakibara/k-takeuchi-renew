@@ -1,12 +1,12 @@
 /* eslint-disable react/prop-types */
 import tw, { styled } from 'twin.macro'
-import { Circle, RightArrow } from '@/elements/index'
+import { Circle, RightArrow, DottedText } from '@/elements/index'
 
 interface Props {
   href: string
-  Number: string
-  NumberOfPrice: string
-  DetailText: string
+  number: string
+  numberOfPrice: string
+  text: string
 }
 
 const Wrapper = styled.div`
@@ -73,21 +73,21 @@ md:(text-[1.4rem])
 `}
 `
 
-const Detail = styled.span`
-  ${tw`
-flex items-center
+// const Detail = styled.span`
+//   ${tw`
+// flex items-center
 
-sp:(text-[calc(16/750*100vw)])
-md:(text-[1.6rem])
+// sp:(text-[calc(16/750*100vw)])
+// md:(text-[1.6rem])
 
-before:(
-	rounded-[50%] border-[1px]
+// before:(
+// 	rounded-[50%] border-[1px]
 
-	sp:(w-[calc(10/750*100vw)] h-[calc(10/750*100vw)] mr-[calc(14/750*100vw)])
-	md:(w-[4px] h-[4px] mr-[8px])
-)
-`}
-`
+// 	sp:(w-[calc(10/750*100vw)] h-[calc(10/750*100vw)] mr-[calc(14/750*100vw)])
+// 	md:(w-[4px] h-[4px] mr-[8px])
+// )
+// `}
+// `
 
 const IconWrapper = styled.span`
   ${tw`
@@ -98,21 +98,21 @@ md:ml-[26px]
 
 export const OrderButton: React.FC<Props> = ({
   href,
-  Number,
-  NumberOfPrice,
-  DetailText,
+  number,
+  numberOfPrice,
+  text,
 }) => {
   return (
     <Wrapper>
       <Inner href={href}>
-        <Numbering>{Number}</Numbering>
+        <Numbering>{number}</Numbering>
         <TextWrapper>
           <PriceWrapper>
             <Price>¥ </Price>
-            <PriceNumber>{NumberOfPrice}</PriceNumber>
+            <PriceNumber>{numberOfPrice}</PriceNumber>
             <Tax>（税込）</Tax>
           </PriceWrapper>
-          <Detail>{DetailText}</Detail>
+          <DottedText text={text} />
         </TextWrapper>
         <IconWrapper>
           <Circle isBlack>
