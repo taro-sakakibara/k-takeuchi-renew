@@ -1,5 +1,5 @@
 import tw, { styled } from 'twin.macro'
-import { Circle, RightArrow } from '@/elements/index'
+import { Circle, Arrow } from '@/elements/index'
 
 interface Props {
   text: string
@@ -39,7 +39,7 @@ export const ContactButton: React.FC<Props> = ({ text, href }) => {
     <Wrapper>
       <Inner href={href}>
         <Circle>
-          <RightArrow />
+          <Arrow />
         </Circle>
         <Text>{text}</Text>
       </Inner>

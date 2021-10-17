@@ -4,7 +4,7 @@ import {
   NumberingHeading,
   Heading2WithIcon,
   Circle,
-  RightArrow,
+  Arrow,
   Note,
 } from '@/elements/index'
 import { ContactButton, OrderButton } from '@/modules/index'
@@ -33,7 +33,7 @@ export const Components = () => (
       }
     />
     <Circle>
-      <RightArrow />
+      <Arrow />
     </Circle>
     <ContactButton href={''} text={'お問い合わせはこちら'} />
     <OrderButton

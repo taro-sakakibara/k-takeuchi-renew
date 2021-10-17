@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import tw, { styled } from 'twin.macro'
-import { Circle, RightArrow, DottedText } from '@/elements/index'
+import { Circle, Arrow, DottedText } from '@/elements/index'
 
 interface Props {
   href: string
@@ -73,22 +73,6 @@ md:(text-[1.4rem])
 `}
 `
 
-// const Detail = styled.span`
-//   ${tw`
-// flex items-center
-
-// sp:(text-[calc(16/750*100vw)])
-// md:(text-[1.6rem])
-
-// before:(
-// 	rounded-[50%] border-[1px]
-
-// 	sp:(w-[calc(10/750*100vw)] h-[calc(10/750*100vw)] mr-[calc(14/750*100vw)])
-// 	md:(w-[4px] h-[4px] mr-[8px])
-// )
-// `}
-// `
-
 const IconWrapper = styled.span`
   ${tw`
 sp:ml-[calc(123/750*100vw)]
@@ -116,7 +100,7 @@ export const OrderButton: React.FC<Props> = ({
         </TextWrapper>
         <IconWrapper>
           <Circle isBlack>
-            <RightArrow isBlack />
+            <Arrow isBlack />
           </Circle>
         </IconWrapper>
       </Inner>
