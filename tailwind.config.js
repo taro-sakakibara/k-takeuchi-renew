@@ -10,9 +10,8 @@ module.exports = {
       black: '#333333',
       white: '#FFFFFF',
       deepGray: '#666666',
+      Gray: '#F7F7F7',
       lightGray: '#989898',
-      beforeHover: '#F7F7F7',
-      afterHover: '#989898',
     },
     textColor: {
       base: '#333333',
@@ -20,6 +19,7 @@ module.exports = {
     },
     borderColor: {
       transparentWhite: 'rgba(255,255,255,0.25)',
+      transparentBlack: 'rgba(51,51,51,0.25)',
     },
     fontSize: {
       //spでの参照サイズ
