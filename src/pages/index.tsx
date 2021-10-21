@@ -1,4 +1,4 @@
-import Header from 'src/components/compositions/header'
+import Header from '@/compositions/Header'
 
 export const Index = () => (
   <>
