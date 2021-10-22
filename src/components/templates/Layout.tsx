@@ -1,11 +1,17 @@
 import tw, { styled } from 'twin.macro'
 
+interface Props {
+  children: JSX.Element
+  paddingBottomSp?: number
+  paddingBottomPc?: number
+}
+
 const StyledWrapper = styled.section<{
   paddingBottomSp?: number
   paddingBottomPc?: number
 }>`
   ${tw`
-sp:(mx-[30/750*100vw] mt-[240/750*100vw])
+sp:(mx-[calc(30/750*100vw)] mt-[calc(240/750*100vw)])
 md:(flex max-w-[1000px] mx-[200px] mt-[200px])
 `}
   padding-bottom:${({ paddingBottomSp }) =>
@@ -19,18 +25,15 @@ md:(flex max-w-[1000px] mx-[200px] mt-[200px])
 const StyledInner = styled.div`
   ${tw`
 md:(ml-[120px])
+sp:(mt-[55px])
 `}
 `
 
-export const Layout = () => {
-  return <main></main>
+export const Layout = ({ children }: Props) => {
+  return <main>{children}</main>
 }
 
-export function Wrapper(
-  children: JSX.Element,
-  paddingBottomSp?: number,
-  paddingBottomPc?: number
-) {
+export function Wrapper({ children, paddingBottomSp, paddingBottomPc }: Props) {
   return (
     <StyledWrapper
       paddingBottomSp={paddingBottomSp}
@@ -41,7 +44,7 @@ export function Wrapper(
   )
 }
 
-export function Inner(children: JSX.Element) {
+export function Inner({ children }: Props) {
   return <StyledInner>{children}</StyledInner>
 }
 
