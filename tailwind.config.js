@@ -11,6 +11,7 @@ module.exports = {
       transparentBlack: 'rgba(51,51,51,0.25)',
       white: '#FFFFFF',
       deepGray: '#666666',
+      hoverGray: '#7F7F7F',
       Gray: '#F7F7F7',
       lightGray: '#989898',
     },

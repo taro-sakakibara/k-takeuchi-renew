@@ -69,27 +69,31 @@ export const Section2: React.FC = () => {
   return (
     <Layout.Wrapper paddingBottomSp={150}>
       <>
-        <Heading2 number={'02'} title={'lesson'} />
         <Layout.Inner>
-          <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
-            {data.map((v) => (
-              <>
-                <div>
-                  <NumberingHeading title={v.number} />
-                  <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
-                    <Heading2WithIcon
-                      title={v.title}
-                      number={v.number}
-                      margin
-                    />
-                    <div className="md:w-[calc(455/1000*100%)]">
-                      <Text text={v.text} />
+          <>
+            <Heading2 number={'02'} title={'lesson'} />
+            <Layout.Container>
+              <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
+                {data.map((v) => (
+                  <>
+                    <div>
+                      <NumberingHeading title={v.number} />
+                      <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
+                        <Heading2WithIcon
+                          title={v.title}
+                          number={v.number}
+                          margin
+                        />
+                        <div className="md:w-[calc(455/1000*100%)]">
+                          <Text text={v.text} />
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </>
-            ))}
-          </div>
+                  </>
+                ))}
+              </div>
+            </Layout.Container>
+          </>
         </Layout.Inner>
       </>
     </Layout.Wrapper>

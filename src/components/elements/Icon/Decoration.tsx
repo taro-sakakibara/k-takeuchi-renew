@@ -5,9 +5,9 @@ interface Props {
 }
 
 const Icon = styled.span<Props>`
-  ${tw`absolute bg-cover
-	sp:(w-[calc(700/750*100vw)] h-[calc(195/750*100vw)] bottom-0)
-	md:(w-[1000px] h-[200px] bottom-0)
+  ${tw`absolute bg-cover transform -translate-x-1/2 left-1/2 bottom-0
+	sp:(w-[calc(700/750*100vw)] h-[calc(195/750*100vw)])
+	md:(w-[1000px] h-[200px])
 `}
   background-image: url(/decoration_01.png);
   @media (min-width: 769px) {
