@@ -6,7 +6,7 @@ interface Props {
 
 const Wrapper = styled.p`
   ${tw`
-text-baseSize leading-[2.3]
+text-baseSize leading-[calc(80/32)] tracking-[0.075em]
 `}
 `
 // eslint-disable-next-line react/prop-types

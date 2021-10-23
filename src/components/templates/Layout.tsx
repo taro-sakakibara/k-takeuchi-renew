@@ -11,12 +11,14 @@ const StyledWrapper = styled.section<{
   paddingBottomPc?: number
 }>`
   ${tw`
+relative
+
 sp:(mx-[calc(30/750*100vw)] mt-[calc(240/750*100vw)])
-md:(flex max-w-[1000px] mx-[200px] mt-[200px])
+md:(flex max-w-[1000px] mx-auto mt-[200px])
 `}
   padding-bottom:${({ paddingBottomSp }) =>
-    paddingBottomSp ? `${paddingBottomSp}px` : ''};
-  @screen md {
+    paddingBottomSp ? `calc(${paddingBottomSp}/750*100vw)` : ''};
+  @media (min-width: 769px) {
     padding-bottom: ${({ paddingBottomPc }) =>
       paddingBottomPc ? `${paddingBottomPc}px` : ''};
   }

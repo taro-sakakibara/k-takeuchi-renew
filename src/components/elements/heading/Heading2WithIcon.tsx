@@ -4,13 +4,21 @@ import { Heading3 } from '@/elements/index'
 interface Props {
   title: string | JSX.Element
   number: string
+  margin?: boolean
 }
 
-const Wrapper = styled.div<{ number: string }>`
-  ${tw`flex items-center`}
+const Wrapper = styled.div<{ number: string; margin?: boolean }>`
+  ${tw`flex items-center flex-shrink-0`}
+
+  margin:${({ margin }) =>
+    margin ? 'calc(60/750*100vw) 0 calc(60/750*100vw) 0' : ''};
+  @media (min-width: 769px) {
+    margin: ${({ margin }) => (margin ? '0' : '')};
+  }
   ::before {
     content: '';
     display: block;
+    flex-shrink: 0;
     margin-right: 20px;
     background-size: cover;
     background-image: ${({ number }) =>
@@ -35,10 +43,17 @@ const Wrapper = styled.div<{ number: string }>`
 `
 
 // eslint-disable-next-line react/prop-types
-export const Heading2WithIcon: React.FC<Props> = ({ title, number }) => {
+export const Heading2WithIcon: React.FC<Props> = ({
+  // eslint-disable-next-line react/prop-types
+  title,
+  // eslint-disable-next-line react/prop-types
+  number,
+  // eslint-disable-next-line react/prop-types
+  margin,
+}) => {
   return (
     <>
-      <Wrapper number={number}>
+      <Wrapper margin={margin} number={number}>
         <Heading3 title={title} />
       </Wrapper>
     </>

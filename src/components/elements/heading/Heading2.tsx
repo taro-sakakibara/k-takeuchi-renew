@@ -7,7 +7,7 @@ interface Props {
 
 const Wrapper = styled.h2`
   ${tw`
-font-en inline-flex items-center
+font-en inline-flex items-center leading-[1]
 
 md:flex-col
 `}
@@ -26,7 +26,7 @@ const Line = styled.span`
   ${tw`
 block bg-black
 sp:(w-[2px] h-[calc(40/750*100vw)] ml-[10px] mr-[20px])
-md:(w-[40px] h-[1px] mb-[25px])
+md:(w-[40px] h-[1px] mt-[10px] mb-[25px])
 `}
 `
 
