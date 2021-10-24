@@ -14,12 +14,13 @@ relative
 sp:(pt-[calc(240/750*100vw)])
 md:(pt-[140px])
 `}
-  background-color:${({ bgGray }) => (bgGray ? `#666666` : '')};
+  color:${({ bgGray }) => bgGray && `#fff`};
+  background-color: ${({ bgGray }) => bgGray && `#666666`};
   padding-bottom: ${({ paddingBottomSp }) =>
-    paddingBottomSp ? `calc(${paddingBottomSp}/750*100vw)` : ''};
+    paddingBottomSp && `calc(${paddingBottomSp}/750*100vw)`};
   @media (min-width: 769px) {
     padding-bottom: ${({ paddingBottomPc }) =>
-      paddingBottomPc ? `${paddingBottomPc}px` : ''};
+      paddingBottomPc && `${paddingBottomPc}px`};
   }
 `
 

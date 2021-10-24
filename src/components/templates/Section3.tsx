@@ -9,7 +9,7 @@ export const Section3: React.FC = () => {
         <>
           <Layout.Inner>
             <>
-              <Heading2 number={'03'} title={'contact'} />
+              <Heading2 bgGray number={'03'} title={'contact'} />
               <Layout.Container>
                 <>
                   <Heading3
