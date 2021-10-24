@@ -5,6 +5,7 @@ import {
   Section3,
   Section4,
   Section5,
+  Section6,
 } from '@/templates/index'
 
 export const Index = () => (
@@ -16,6 +17,7 @@ export const Index = () => (
         <Section3 />
         <Section4 />
         <Section5 />
+        <Section6 />
       </>
     </Layout>
   </>

@@ -2,22 +2,25 @@ import tw, { styled } from 'twin.macro'
 
 interface Props {
   isVertical?: boolean
+  isWhite?: boolean
 }
-const Text = styled.p`
+const Text = styled.p<{ isWhite?: boolean }>`
   ${tw`
-	// font-enが当たらない。。
 text-small opacity-50 font-en
 `}
+  color: ${({ isWhite }) => isWhite && '#fff'}
 `
 
-export const CopyRight: React.FC<Props> = (isVertical) => {
+// eslint-disable-next-line react/prop-types
+export const CopyRight: React.FC<Props> = ({ isVertical, isWhite }) => {
   const vertical = isVertical
-    ? // rotate-180がなんか微妙。。
-      'writing-mode-vertical-lr transform rotate-180'
+    ? 'writing-mode-vertical-lr transform rotate-180'
     : 'writing-mode-horizontal-tb'
 
   return (
-    <Text className={vertical}>Copyright &copy; 2020 Katsuya Takeuchi</Text>
+    <Text isWhite={isWhite} className={vertical}>
+      Copyright &copy; 2020 Katsuya Takeuchi
+    </Text>
   )
 }
 
