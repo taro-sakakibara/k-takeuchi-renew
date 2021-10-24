@@ -11,7 +11,8 @@ module.exports = {
       transparentBlack: 'rgba(51,51,51,0.25)',
       white: '#FFFFFF',
       deepGray: '#666666',
-      hoverGray: '#7F7F7F',
+      hoverDeepGray: '#7F7F7F',
+      hoverLightGray: 'rgba(152,152,152,0.1)',
       Gray: '#F7F7F7',
       lightGray: '#989898',
     },
@@ -22,6 +23,7 @@ module.exports = {
     borderColor: {
       transparentWhite: 'rgba(255,255,255,0.25)',
       transparentBlack: 'rgba(51,51,51,0.25)',
+      transparentGray: 'rgba(112,112,112,0.5)',
     },
     fontSize: {
       //spでの参照サイズ

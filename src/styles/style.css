@@ -27,4 +27,7 @@
   img {
     @apply border-none;
   }
+  li {
+    @apply list-none;
+  }
 }

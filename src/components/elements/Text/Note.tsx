@@ -7,7 +7,7 @@ interface Props {
 
 const Text = styled.div`
   ${tw`
-indent-1 pl-indent1
+indent-1 pl-indent1 text-baseSize leading-[calc(80/32)]
 `}
   ::before {
     content: '※';

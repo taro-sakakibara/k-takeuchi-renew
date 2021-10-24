@@ -19,10 +19,10 @@
   --leading-text: 1.75;
 
   /* indent */
-  --indent-base: calc(-16 / 750 * 100vw);
+  --indent-base: calc(-32 / 750 * 100vw);
 
   /* padding for indent */
-  --negative-base: calc(16 / 750 * 100vw);
+  --negative-base: calc(32 / 750 * 100vw);
 
   /* gap(vertical) */
 

@@ -14,7 +14,7 @@ bg-lightGray rounded-[5px] transition-colors
 sp:(w-[calc(690/750*100vw)])
 md:(w-[300px])
 
-hover:(bg-hoverGray)
+hover:(bg-hoverDeepGray)
 `}
   margin-top: ${({ marginTop }) => (marginTop ? 'calc(60/750*100vw)' : '')};
   @media (min-width-769px) {

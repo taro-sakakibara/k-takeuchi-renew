@@ -1,6 +1,10 @@
 import tw, { styled } from 'twin.macro'
 
-const Element = styled.span`
+interface Props {
+  setActive?: boolean
+}
+
+const Element = styled.span<{ setActive?: boolean }>`
   ${tw`
 relative
 block h-[1px] bg-transparentBlack
@@ -15,9 +19,14 @@ after:(
 	md:(h-[12px])
 )
 `}
+  ::after {
+    transform: ${({ setActive }) =>
+      setActive && 'translate(-50%,-50%) rotate(90deg)'};
+    opacity: ${({ setActive }) => setActive && '0'};
+  }
 `
 // eslint-disable-next-line react/prop-types
-export const Plus: React.FC = () => {
-  return <Element />
+export const Plus: React.FC<Props> = ({ setActive }) => {
+  return <Element setActive={setActive} />
 }
 export default Plus

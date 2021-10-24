@@ -1,5 +1,11 @@
-// import { Heading2, Heading3, Text, Decoration } from '@/elements/index'
-import { Layout, Section1, Section2, Section3 } from '@/templates/index'
+import {
+  Layout,
+  Section1,
+  Section2,
+  Section3,
+  Section4,
+} from '@/templates/index'
+
 export const Index = () => (
   <>
     <Layout>
@@ -7,6 +13,7 @@ export const Index = () => (
         <Section1 />
         <Section2 />
         <Section3 />
+        <Section4 />
       </>
     </Layout>
   </>
