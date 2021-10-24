@@ -22,7 +22,7 @@ hover:(bg-lightGray)
 
 const Inner = styled.a`
   ${tw`
-flex items-center
+flex items-center justify-between
 sp:(py-[calc(50/750*100vw)] px-[calc(60/750*100vw)])
 md:(py-[25px] px-[40px])
 `}
@@ -33,13 +33,6 @@ const Numbering = styled.span`
 	border-b-2 border-solid
 sp:(text-[calc(50/750*100vw)] )
 md:(text-[2.4rem] )
-`}
-`
-
-const TextWrapper = styled.div`
-  ${tw`
-sp:ml-[calc(60/750*100vw)]
-md:ml-[40px]
 `}
 `
 
@@ -73,13 +66,6 @@ md:(text-[1.4rem])
 `}
 `
 
-const IconWrapper = styled.span`
-  ${tw`
-sp:ml-[calc(123/750*100vw)]
-md:ml-[26px]
-`}
-`
-
 export const OrderButton: React.FC<Props> = ({
   href,
   number,
@@ -90,19 +76,17 @@ export const OrderButton: React.FC<Props> = ({
     <Wrapper>
       <Inner href={href}>
         <Numbering>{number}</Numbering>
-        <TextWrapper>
+        <div>
           <PriceWrapper>
             <Price>¥ </Price>
             <PriceNumber>{numberOfPrice}</PriceNumber>
             <Tax>（税込）</Tax>
           </PriceWrapper>
           <DottedText text={text} />
-        </TextWrapper>
-        <IconWrapper>
-          <Circle isBlack>
-            <Arrow isBlack />
-          </Circle>
-        </IconWrapper>
+        </div>
+        <Circle isBlack>
+          <Arrow isBlack />
+        </Circle>
       </Inner>
     </Wrapper>
   )

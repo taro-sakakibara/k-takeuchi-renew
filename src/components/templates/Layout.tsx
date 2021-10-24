@@ -27,7 +27,7 @@ md:(pt-[140px])
 const StyledContainer = styled.div`
   ${tw`
 md:(ml-[120px])
-sp:(mt-[55px])
+sp:(mt-[calc(55/750*100vw)])
 `}
 `
 const StyledInner = styled.div`
