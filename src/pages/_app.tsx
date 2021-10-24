@@ -3,7 +3,7 @@ import Head from 'next/head'
 // import { Global } from '@emotion/react'
 import { AppProps } from 'next/app'
 import '../styles/style.css'
-import { Header } from '@/compositions/Header'
+import { Header } from '@/compositions/index'
 
 const App = ({ Component, pageProps }: AppProps) => (
   <>
