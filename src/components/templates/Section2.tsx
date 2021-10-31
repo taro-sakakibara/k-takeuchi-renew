@@ -77,23 +77,21 @@ export const Section2: React.FC = () => {
             <Heading2 number={'02'} title={'lesson'} />
             <Layout.Container>
               <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
-                {data.map((v) => (
-                  <>
-                    <div className="relative">
-                      <NumberingHeading title={v.number} />
-                      <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
-                        <Heading2WithIcon
-                          title={v.title}
-                          number={v.number}
-                          margin
-                        />
-                        <div className="md:w-[calc(455/1000*100%)]">
-                          <Text text={v.text} />
-                        </div>
+                {data.map((v, i) => (
+                  <div key={i} className="relative">
+                    <NumberingHeading title={v.number} />
+                    <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
+                      <Heading2WithIcon
+                        title={v.title}
+                        number={v.number}
+                        margin
+                      />
+                      <div className="md:w-[calc(455/1000*100%)]">
+                        <Text text={v.text} />
                       </div>
-                      {v.decoration && <Decoration number={v.decoration} />}
                     </div>
-                  </>
+                    {v.decoration && <Decoration number={v.decoration} />}
+                  </div>
                 ))}
               </div>
             </Layout.Container>

@@ -205,25 +205,23 @@ export const Collapse: React.FC = () => {
 
   return (
     <List>
-      {data.map((v) => (
-        <>
-          <Head>
-            <Wrapper onClick={v.toggleAccordion}>
-              <Container>
-                <NumberingHeading title={v.numberTitle} />
-                <HeadingWrapper>
-                  <Heading3 title={v.headingTitle} />
-                </HeadingWrapper>
-              </Container>
-              <Circle isBlack>
-                <Plus setActive={v.setActive} />
-              </Circle>
-            </Wrapper>
-            <Body setActive={v.setActive}>
-              <BodyInner>{v.children}</BodyInner>
-            </Body>
-          </Head>
-        </>
+      {data.map((v, i) => (
+        <Head key={i}>
+          <Wrapper onClick={v.toggleAccordion}>
+            <Container>
+              <NumberingHeading title={v.numberTitle} />
+              <HeadingWrapper>
+                <Heading3 title={v.headingTitle} />
+              </HeadingWrapper>
+            </Container>
+            <Circle isBlack>
+              <Plus setActive={v.setActive} />
+            </Circle>
+          </Wrapper>
+          <Body setActive={v.setActive}>
+            <BodyInner>{v.children}</BodyInner>
+          </Body>
+        </Head>
       ))}
     </List>
   )
