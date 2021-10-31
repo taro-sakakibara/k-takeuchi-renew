@@ -5,7 +5,11 @@ import { Collapse } from '@/compositions/index'
 export const Section4: React.FC = () => {
   return (
     <>
-      <Layout.Wrapper paddingBottomSp={430} paddingBottomPc={460}>
+      <Layout.Wrapper
+        paddingTopPc={420}
+        paddingBottomSp={430}
+        paddingBottomPc={460}
+      >
         <>
           <Layout.Inner>
             <>
