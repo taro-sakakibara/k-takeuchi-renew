@@ -13,6 +13,7 @@ interface Props {
 const StyledWrapper = styled.section<Props>`
   ${tw`
 relative
+md:px-[50px]
 `}
   color:${({ bgGray }) => bgGray && `#fff`};
   background-color: ${({ bgGray }) => bgGray && `#666666`};
