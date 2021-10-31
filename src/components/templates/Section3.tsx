@@ -1,7 +1,7 @@
 import { Heading2, Heading3, Text } from '@/elements/index'
 import { ContactButton } from '@/modules/index'
 import { Layout } from './Layout'
-import { Parallax } from '@/modules/index'
+import { ParallaxBottom } from '@/modules/index'
 
 export const Section3: React.FC = () => {
   return (
@@ -46,7 +46,7 @@ export const Section3: React.FC = () => {
               </Layout.Container>
             </>
           </Layout.Inner>
-          <Parallax />
+          <ParallaxBottom />
         </>
       </Layout.Wrapper>
     </>

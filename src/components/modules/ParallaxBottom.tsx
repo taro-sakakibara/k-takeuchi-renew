@@ -35,9 +35,8 @@ md:(w-[calc(1200/1400*100vw)] h-[400px])
   background-position: center;
 `
 
-export const Parallax: React.FC = () => {
+export const ParallaxBottom: React.FC = () => {
   const isMobile = useMedia({ maxWidth: '768px' })
-
   useEffect(() => {
     if (process.browser) {
       gsap.registerPlugin(ScrollTrigger)
@@ -46,10 +45,10 @@ export const Parallax: React.FC = () => {
   }, [])
 
   const setAnimation = (isMobile: boolean) => {
-    gsap.to('#parallax-animate', {
+    gsap.to('#parallax-bottom-animate', {
       bottom: `${isMobile ? 'calc(-100/750*100vw)' : '-100px'}`,
       scrollTrigger: {
-        trigger: '#parallax-trigger',
+        trigger: '#parallax-bottom-trigger',
         toggleActions: 'play none none reverse',
         scrub: true,
       },
@@ -57,11 +56,11 @@ export const Parallax: React.FC = () => {
   }
 
   return (
-    <Wrapper id="parallax-trigger">
+    <Wrapper id="parallax-bottom-trigger">
       <Container>
-        <AnimateContainer id="parallax-animate" />
+        <AnimateContainer id="parallax-bottom-animate" />
       </Container>
     </Wrapper>
   )
 }
-export default Parallax
+export default ParallaxBottom
