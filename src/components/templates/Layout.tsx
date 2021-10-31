@@ -4,15 +4,15 @@ interface Props {
   children: JSX.Element
   paddingBottomSp?: number
   paddingBottomPc?: number
+  paddingTopSp?: number
+  paddingTopPc?: number
   bgGray?: boolean
+  className?: string
 }
 
 const StyledWrapper = styled.section<Props>`
   ${tw`
 relative
-
-sp:(pt-[calc(240/750*100vw)])
-md:(pt-[140px])
 `}
   color:${({ bgGray }) => bgGray && `#fff`};
   background-color: ${({ bgGray }) => bgGray && `#666666`};
@@ -21,6 +21,12 @@ md:(pt-[140px])
   @media (min-width: 769px) {
     padding-bottom: ${({ paddingBottomPc }) =>
       paddingBottomPc && `${paddingBottomPc}px`};
+  }
+  padding-top: ${({ paddingTopSp }) =>
+    paddingTopSp ? `calc(${paddingTopSp}/750*100vw)` : 'calc(240/750*100vw)'};
+  @media (min-width: 769px) {
+    padding-top: ${({ paddingTopPc }) =>
+      paddingTopPc ? `${paddingTopPc}px` : '140px'};
   }
 `
 
@@ -46,12 +52,18 @@ export function Wrapper({
   bgGray,
   paddingBottomSp,
   paddingBottomPc,
+  paddingTopSp,
+  paddingTopPc,
+  className,
 }: Props) {
   return (
     <StyledWrapper
+      className={className}
       bgGray={bgGray}
       paddingBottomSp={paddingBottomSp}
       paddingBottomPc={paddingBottomPc}
+      paddingTopSp={paddingTopSp}
+      paddingTopPc={paddingTopPc}
     >
       {children}
     </StyledWrapper>
