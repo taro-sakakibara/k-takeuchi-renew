@@ -1,6 +1,5 @@
 import tw, { styled } from 'twin.macro'
 import Scroll from 'react-scroll'
-// import { Scroll } from 'react-scroll'
 
 const NavWrapper = styled.nav`
   ${tw`
@@ -11,7 +10,7 @@ md:(
 sp:(
 	w-[calc(690/750*100vw)]
 	fixed h-[100vh] bg-deepGray opacity-[96%]
-	z-top
+	z-max
 )
 `}
 `
