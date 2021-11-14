@@ -1,5 +1,6 @@
 export { ScrollDown } from './header/ScrollDown'
 export { CopyRight } from './Text/CopyRight'
+export { GlobalNav } from './header/GlobalNav'
 export { Heading2 } from './heading/Heading2'
 export { Heading3 } from './heading/Heading3'
 export { NumberingHeading } from './heading/NumberingHeading'

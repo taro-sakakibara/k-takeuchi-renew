@@ -30,7 +30,7 @@ export const Wrapper = styled.header`
   ${tw`
 relative h-[100vh]
 
-md:max-h-[705px] max-w-[1400px] mx-auto
+md:max-w-[1400px] mx-auto
 `}
 `
 

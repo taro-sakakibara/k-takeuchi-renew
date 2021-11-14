@@ -1,9 +1,10 @@
 import { Heading2, Heading3, Decoration, Text } from '@/elements/index'
 import { Layout } from './Layout'
+import Scroll from 'react-scroll'
 
 export const Section1: React.FC = () => {
   return (
-    <>
+    <Scroll.Element name="concept">
       <Layout.Wrapper paddingBottomSp={230} paddingBottomPc={270}>
         <>
           <Layout.Inner>
@@ -38,7 +39,7 @@ export const Section1: React.FC = () => {
           <Decoration number={1} />
         </>
       </Layout.Wrapper>
-    </>
+    </Scroll.Element>
   )
 }
 export default Section1

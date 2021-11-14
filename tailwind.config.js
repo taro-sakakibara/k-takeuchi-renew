@@ -45,6 +45,7 @@ module.exports = {
       header1: 1,
       header2: 2,
       header3: 3,
+      top: 999,
     },
     screens: {
       sp: { max: '768px' },
