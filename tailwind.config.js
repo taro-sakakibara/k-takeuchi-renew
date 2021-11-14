@@ -8,15 +8,22 @@ module.exports = {
     },
     colors: {
       black: '#333333',
+      transparentBlack: 'rgba(51,51,51,0.25)',
       white: '#FFFFFF',
       deepGray: '#666666',
+      hoverDeepGray: '#7F7F7F',
+      hoverLightGray: 'rgba(152,152,152,0.1)',
+      Gray: '#F7F7F7',
       lightGray: '#989898',
-      beforeHover: '#F7F7F7',
-      afterHover: '#989898',
     },
     textColor: {
       base: '#333333',
       white: '#FFFFFF',
+    },
+    borderColor: {
+      transparentWhite: 'rgba(255,255,255,0.25)',
+      transparentBlack: 'rgba(51,51,51,0.25)',
+      transparentGray: 'rgba(112,112,112,0.5)',
     },
     fontSize: {
       //spでの参照サイズ
@@ -28,10 +35,17 @@ module.exports = {
       baseSize: 'var(--base-text)', //1.6rem
       small: 'var(--small-text)', //1.2rem
     },
+    textIndent: {
+      1: 'var(--indent-base)',
+    },
+    padding: {
+      indent1: 'var(--negative-base)',
+    },
     zIndex: {
       header1: 1,
       header2: 2,
       header3: 3,
+      max: 999,
     },
     screens: {
       sp: { max: '768px' },
@@ -72,6 +86,14 @@ module.exports = {
   plugins: [
     require('tailwindcss-writing-mode')({
       variants: ['responsive', 'hover'],
+    }),
+    require('tailwindcss-typography')({
+      // all these options default to the values specified here
+      ellipsis: true, // whether to generate ellipsis utilities
+      hyphens: true, // whether to generate hyphenation utilities
+      kerning: true, // whether to generate kerning utilities
+      textUnset: true, // whether to generate utilities to unset text properties
+      componentPrefix: 'c-', // the prefix to use for text style classes
     }),
   ],
 

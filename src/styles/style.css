@@ -24,4 +24,10 @@
   body {
     @apply text-base font-body;
   }
+  img {
+    @apply border-none;
+  }
+  li {
+    @apply list-none;
+  }
 }
