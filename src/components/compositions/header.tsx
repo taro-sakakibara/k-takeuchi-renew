@@ -1,12 +1,11 @@
 import tw, { styled } from 'twin.macro'
 import { ScrollDown, CopyRight, Item, GlobalNav } from '@/elements/index'
 import { useMedia } from 'use-media'
-import Scroll from 'react-scroll'
 
 const ScrollDownWrapper = styled.div`
   ${tw`
 absolute right-[10px] bottom-[50px]
-md:(flex flex-col justify-between items-center h-[465px] right-[35px] bottom-[-60px])
+md:(flex flex-col justify-between items-center h-[465px] right-[35px])
 `}
 `
 
@@ -48,10 +47,6 @@ export const Header: React.FC = () => {
           )}
         </ScrollDownWrapper>
       </Item.Wrapper>
-      <Scroll.Element
-        className="w-[100px] h-[100px] bg-black mt-[300px]"
-        name="concept"
-      ></Scroll.Element>
     </>
   )
 }
