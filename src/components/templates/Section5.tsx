@@ -8,6 +8,7 @@ import {
 } from '@/elements/index'
 import { OrderButton } from '@/modules/index'
 import { Layout } from './Layout'
+import Scroll from 'react-scroll'
 
 const Wrapper = styled.div`
   ${tw`
@@ -110,53 +111,55 @@ export const Section5: React.FC = () => {
     ],
   }
   return (
-    <Layout.Wrapper paddingBottomSp={400} paddingBottomPc={480}>
-      <Layout.Inner>
-        <>
-          <Heading2 number={'05'} title={'Corse'} />
-          <Layout.Container>
-            <Wrapper>
-              {data.corse.map((v1, i1) => (
-                <div key={i1}>
-                  <NumberingHeading title={v1.number} />
-                  <ContentWrapper>
-                    <Unit>
-                      <Heading3 marginBottom title={v1.title} />
-                      <ul>
-                        {v1.dottedText.map((v2, i2) => (
-                          <DottedText key={i2} as="li" text={v2} />
-                        ))}
-                      </ul>
-                      <div className="md:mt-[40px] sp:mt-[calc(40/750*100vw)]">
-                        {v1.noteText.map((v3, i3) => (
-                          <Note key={i3} text={v3} />
+    <Scroll.Element name="corse">
+      <Layout.Wrapper paddingBottomSp={400} paddingBottomPc={480}>
+        <Layout.Inner>
+          <>
+            <Heading2 number={'05'} title={'Corse'} />
+            <Layout.Container>
+              <Wrapper>
+                {data.corse.map((v1, i1) => (
+                  <div key={i1}>
+                    <NumberingHeading title={v1.number} />
+                    <ContentWrapper>
+                      <Unit>
+                        <Heading3 marginBottom title={v1.title} />
+                        <ul>
+                          {v1.dottedText.map((v2, i2) => (
+                            <DottedText key={i2} as="li" text={v2} />
+                          ))}
+                        </ul>
+                        <div className="md:mt-[40px] sp:mt-[calc(40/750*100vw)]">
+                          {v1.noteText.map((v3, i3) => (
+                            <Note key={i3} text={v3} />
+                          ))}
+                        </div>
+                      </Unit>
+                      <div className="md:space-y-[10px] sp:space-y-[20/750*100vw] sp:mt-[calc(65/750*100vw)]">
+                        {v1.button.map((v4, i4) => (
+                          <OrderButton
+                            key={i4}
+                            href={v4.href}
+                            number={v4.number}
+                            numberOfPrice={v4.numberOfPrice}
+                            text={v4.text}
+                          />
                         ))}
                       </div>
-                    </Unit>
-                    <div className="md:space-y-[10px] sp:space-y-[20/750*100vw] sp:mt-[calc(65/750*100vw)]">
-                      {v1.button.map((v4, i4) => (
-                        <OrderButton
-                          key={i4}
-                          href={v4.href}
-                          number={v4.number}
-                          numberOfPrice={v4.numberOfPrice}
-                          text={v4.text}
-                        />
-                      ))}
-                    </div>
-                  </ContentWrapper>
-                </div>
-              ))}
-              <NoteWrapper>
-                {data.note.map((v, i) => (
-                  <Note key={i} text={v} />
+                    </ContentWrapper>
+                  </div>
                 ))}
-              </NoteWrapper>
-            </Wrapper>
-          </Layout.Container>
-        </>
-      </Layout.Inner>
-    </Layout.Wrapper>
+                <NoteWrapper>
+                  {data.note.map((v, i) => (
+                    <Note key={i} text={v} />
+                  ))}
+                </NoteWrapper>
+              </Wrapper>
+            </Layout.Container>
+          </>
+        </Layout.Inner>
+      </Layout.Wrapper>
+    </Scroll.Element>
   )
 }
 export default Section5

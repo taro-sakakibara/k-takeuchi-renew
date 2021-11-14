@@ -1,10 +1,11 @@
 import { Heading2, Decoration } from '@/elements/index'
 import { Layout } from './Layout'
 import { Collapse } from '@/compositions/index'
+import Scroll from 'react-scroll'
 
 export const Section4: React.FC = () => {
   return (
-    <>
+    <Scroll.Element name="faq">
       <Layout.Wrapper
         paddingTopPc={420}
         paddingBottomSp={430}
@@ -22,7 +23,7 @@ export const Section4: React.FC = () => {
           <Decoration number={5} />
         </>
       </Layout.Wrapper>
-    </>
+    </Scroll.Element>
   )
 }
 export default Section4

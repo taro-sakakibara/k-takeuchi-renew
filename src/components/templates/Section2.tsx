@@ -6,6 +6,7 @@ import {
   Text,
 } from '@/elements/index'
 import { Layout } from './Layout'
+import Scroll from 'react-scroll'
 
 export const Section2: React.FC = () => {
   const data = [
@@ -70,35 +71,37 @@ export const Section2: React.FC = () => {
     },
   ]
   return (
-    <Layout.Wrapper paddingBottomSp={650} paddingBottomPc={200}>
-      <>
-        <Layout.Inner>
-          <>
-            <Heading2 number={'02'} title={'lesson'} />
-            <Layout.Container>
-              <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
-                {data.map((v, i) => (
-                  <div key={i} className="relative">
-                    <NumberingHeading title={v.number} />
-                    <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
-                      <Heading2WithIcon
-                        title={v.title}
-                        number={v.number}
-                        margin
-                      />
-                      <div className="md:w-[calc(455/1000*100%)]">
-                        <Text text={v.text} />
+    <Scroll.Element name="lesson">
+      <Layout.Wrapper paddingBottomSp={650} paddingBottomPc={200}>
+        <>
+          <Layout.Inner>
+            <>
+              <Heading2 number={'02'} title={'lesson'} />
+              <Layout.Container>
+                <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
+                  {data.map((v, i) => (
+                    <div key={i} className="relative">
+                      <NumberingHeading title={v.number} />
+                      <div className="md:flex md:justify-between md:items-start md:mt-[40px]">
+                        <Heading2WithIcon
+                          title={v.title}
+                          number={v.number}
+                          margin
+                        />
+                        <div className="md:w-[calc(455/1000*100%)]">
+                          <Text text={v.text} />
+                        </div>
                       </div>
+                      {v.decoration && <Decoration number={v.decoration} />}
                     </div>
-                    {v.decoration && <Decoration number={v.decoration} />}
-                  </div>
-                ))}
-              </div>
-            </Layout.Container>
-          </>
-        </Layout.Inner>
-      </>
-    </Layout.Wrapper>
+                  ))}
+                </div>
+              </Layout.Container>
+            </>
+          </Layout.Inner>
+        </>
+      </Layout.Wrapper>
+    </Scroll.Element>
   )
 }
 export default Section2

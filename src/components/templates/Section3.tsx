@@ -2,10 +2,11 @@ import { Heading2, Heading3, Text } from '@/elements/index'
 import { ContactButton } from '@/modules/index'
 import { Layout } from './Layout'
 import { ParallaxBottom } from '@/modules/index'
+import Scroll from 'react-scroll'
 
 export const Section3: React.FC = () => {
   return (
-    <>
+    <Scroll.Element name="contact">
       <Layout.Wrapper
         bgGray
         paddingTopSp={350}
@@ -49,7 +50,7 @@ export const Section3: React.FC = () => {
           <ParallaxBottom />
         </>
       </Layout.Wrapper>
-    </>
+    </Scroll.Element>
   )
 }
 export default Section3

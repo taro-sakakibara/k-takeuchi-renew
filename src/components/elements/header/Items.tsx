@@ -46,11 +46,11 @@ md:w-[90%]
 
 export const BgContainer = styled.div`
   ${tw`
-absolute left-0 top-0 w-full h-full
+absolute left-0 top-0 w-full
 z-header2
 
-sp:(bg-center bg-cover bg-mv)
-md:(bg-no-repeat bg-contain bg-mvPc)
+sp:(bg-center bg-cover bg-mv h-full)
+md:(bg-no-repeat bg-contain bg-mvPc h-[87%])
 `}
 `
 

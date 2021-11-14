@@ -38,7 +38,8 @@ sp:(text-large text-white text-right mt-[calc(120/750*100vw)] first:mt-0)
 export const GlobalNav: React.FC = () => {
   const text = [
     { title: 'Concept', scrollTo: 'concept' },
-    { title: 'FAQ', scrollTo: 'faq' },
+    { title: 'Lesson', scrollTo: 'lesson' },
+    { title: 'FAQ', scrollTo: 'faq', offset: 280 },
     { title: 'Corse', scrollTo: 'corse' },
     { title: 'Instructor', scrollTo: 'instructor' },
     { title: 'Contact', scrollTo: 'contact' },
@@ -46,9 +47,15 @@ export const GlobalNav: React.FC = () => {
 
   const items = text.map((v, i) => (
     <ListItem key={i}>
-      <Scroll.Link to={v.scrollTo} smooth={true}>
-        {v.title}
-      </Scroll.Link>
+      {v.offset ? (
+        <Scroll.Link to={v.scrollTo} smooth={true} offset={v.offset}>
+          {v.title}
+        </Scroll.Link>
+      ) : (
+        <Scroll.Link to={v.scrollTo} smooth={true}>
+          {v.title}
+        </Scroll.Link>
+      )}
     </ListItem>
   ))
 
