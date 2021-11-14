@@ -4,19 +4,25 @@
   /* color */
 
   /* font-size */
-  --large-text: 2.4rem;
-  --medium-text: 1.8rem;
-  --base-text: 1.6rem;
-  --small-text: 1.2rem;
+  --large-text: calc((48 / 750) * 100vw);
+  --medium-text: calc((36 / 750) * 100vw);
+  --base-text: calc((32 / 750) * 100vw);
+  --small-text: calc((24 / 750) * 100vw);
 
   /* heading */
   --h1: calc((70 / 750) * 100vw);
-  --h2: 1.2rem;
-  --h3: 2rem;
+  --h2: calc((24 / 750) * 100vw);
+  --h3: calc((40 / 750) * 100vw);
 
   /* line-height */
   --leading-head: 1.5;
   --leading-text: 1.75;
+
+  /* indent */
+  --indent-base: calc(-32 / 750 * 100vw);
+
+  /* padding for indent */
+  --negative-base: calc(32 / 750 * 100vw);
 
   /* gap(vertical) */
 
@@ -47,5 +53,7 @@
     --h3: 2.4rem;
     --leading-head: 1.5;
     --leading-text: 2.5;
+    --indent-base: -0.8rem;
+    --negative-base: 0.8rem;
   }
 }
