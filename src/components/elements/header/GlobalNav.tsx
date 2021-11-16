@@ -15,16 +15,18 @@ sp:(
 	z-gNav1 transition-[all 0.1s ease-in-out]
 )
 `}
-
-  right: ${({ isOpen }) => (isOpen ? '0' : 'calc(-690/750*100vw)')};
-  opacity: ${({ isOpen }) => (isOpen ? '96%' : '0')};
+  @media (max-width: 768px) {
+    right: ${({ isOpen }) => (isOpen ? '0' : 'calc(-690/750*100vw)')};
+    opacity: ${({ isOpen }) => (isOpen ? '96%' : '0')};
+  }
 `
 
 const ListWrapper = styled.ul`
   ${tw`
 inline-flex h-full
+
 md:(py-[40px])
-sp:(flex-col justify-center pr-[4.6vw])
+sp:(flex-col justify-center pr-[4.6vw] space-y-[60px])
 `}
 `
 
@@ -32,7 +34,7 @@ const ListItem = styled.li`
   ${tw`
 font-en
 md:(text-baseSize text-base ml-[65px] first:ml-0)
-sp:(text-large text-white text-right mt-[calc(120/750*100vw)] first:mt-0)
+sp:(text-[2.4rem] text-white text-right)
 `}
 `
 
@@ -51,12 +53,13 @@ const HamburgerLine = styled.span<{ isOpen: boolean }>`
 	before:(block h-[1px] bg-white transition-[all 0.1s ease-in-out])
 	after:(block h-[1px] bg-white transition-[all 0.1s ease-in-out])
 	`}
-
-  :before {
-    transform: ${({ isOpen }) => isOpen && 'translateY(5px) rotate(30deg)'};
-  }
-  :after {
-    transform: ${({ isOpen }) => isOpen && 'translateY(-5px) rotate(-30deg)'};
+  @media (max-width: 768px) {
+    :before {
+      transform: ${({ isOpen }) => isOpen && 'translateY(5px) rotate(30deg)'};
+    }
+    :after {
+      transform: ${({ isOpen }) => isOpen && 'translateY(-5px) rotate(-30deg)'};
+    }
   }
 `
 
@@ -70,8 +73,8 @@ const text = [
 ]
 
 export const GlobalNav: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
   const isWide = useMedia({ minWidth: '769px' })
+  const [isOpen, setIsOpen] = useState(isWide ? true : false)
 
   return (
     <>
