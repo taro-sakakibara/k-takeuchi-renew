@@ -12,7 +12,7 @@ before:(
 	bg-black transform -translate-x-1/2 -translate-y-1/2
 	// animationはtailwind.config内に記述
 	animate-downPointer
-	sp:(h-[calc(14/750*100vw)] w-[calc(14/750*100vw)] bottom-[calc(14/750*100vw)])
+	sp:(h-[calc(14/750*100vw)] w-[calc(14/750*100vw)] bottom-[calc(120/750*100vw)])
 	md:(h-[7px] w-[7px] bottom-[60px])
 )
 `}
