@@ -38,6 +38,7 @@ md:(w-[calc(1200/1400*100vw)] h-[400px])
 export const ParallaxTop: React.FC = () => {
   const isMobile = useMedia({ maxWidth: '768px' })
 
+  // useEffect内のisMobileが常にfalseを返してしまう。
   useEffect(() => {
     if (process.browser) {
       gsap.registerPlugin(ScrollTrigger)
