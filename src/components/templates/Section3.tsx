@@ -16,7 +16,12 @@ export const Section3: React.FC = () => {
         <>
           <Layout.Inner>
             <>
-              <Heading2 bgGray number={'03'} title={'contact'} />
+              <Heading2
+                bgGray
+                number={'03'}
+                title={'contact'}
+                id="heading-03"
+              />
               <Layout.Container>
                 <>
                   <Heading3

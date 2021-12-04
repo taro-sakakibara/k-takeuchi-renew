@@ -76,7 +76,7 @@ export const Section2: React.FC = () => {
         <>
           <Layout.Inner>
             <>
-              <Heading2 number={'02'} title={'lesson'} />
+              <Heading2 number={'02'} title={'lesson'} id="heading-02" />
               <Layout.Container>
                 <div className="sp:space-y-[160/750*100vw] md:space-y-[60px]">
                   {data.map((v, i) => (

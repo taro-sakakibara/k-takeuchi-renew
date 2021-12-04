@@ -115,7 +115,7 @@ export const Section5: React.FC = () => {
       <Layout.Wrapper paddingBottomSp={400} paddingBottomPc={480}>
         <Layout.Inner>
           <>
-            <Heading2 number={'05'} title={'Corse'} />
+            <Heading2 number={'05'} title={'Corse'} id="heading-05" />
             <Layout.Container>
               <Wrapper>
                 {data.corse.map((v1, i1) => (

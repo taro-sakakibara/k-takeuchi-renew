@@ -96,6 +96,17 @@ module.exports = {
       textUnset: true, // whether to generate utilities to unset text properties
       componentPrefix: 'c-', // the prefix to use for text style classes
     }),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.text-shadow': {
+          textShadow: '0px 0px 1px black',
+        },
+        '.text-shadow-white': {
+          textShadow: '0px 0px 1px white',
+        },
+      }
+      addUtilities(newUtilities)
+    },
   ],
 
   mode: 'jit',

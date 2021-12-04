@@ -16,7 +16,12 @@ export const Section6: React.FC = () => {
           <ParallaxTop />
           <Layout.Inner>
             <>
-              <Heading2 bgGray number={'07'} title={'contact'} />
+              <Heading2
+                bgGray
+                number={'07'}
+                title={'contact'}
+                id="heading-06"
+              />
               <Layout.Container>
                 <>
                   <Heading3
