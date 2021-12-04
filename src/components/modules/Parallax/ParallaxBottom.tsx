@@ -2,7 +2,6 @@ import tw, { styled } from 'twin.macro'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 import { useEffect } from 'react'
-import { useMedia } from 'use-media'
 
 const Wrapper = styled.div`
   ${tw`
@@ -36,19 +35,16 @@ md:(w-[calc(1200/1400*100vw)] h-[400px])
 `
 
 export const ParallaxBottom: React.FC = () => {
-  const isMobile = useMedia({ maxWidth: '768px' })
-
-  // useEffect内のisMobileが常にfalseを返してしまう。
   useEffect(() => {
     if (process.browser) {
       gsap.registerPlugin(ScrollTrigger)
-      setAnimation(isMobile)
+      setAnimation()
     }
   }, [])
 
-  const setAnimation = (isMobile: boolean) => {
+  const setAnimation = () => {
     gsap.to('#parallax-bottom-animate', {
-      bottom: `${isMobile ? 'calc(-100/750*100vw)' : '-100px'}`,
+      bottom: '-33%',
       scrollTrigger: {
         trigger: '#parallax-bottom-trigger',
         toggleActions: 'play none none reverse',
