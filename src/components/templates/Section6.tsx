@@ -20,7 +20,7 @@ export const Section6: React.FC = () => {
               <Heading2
                 bgGray
                 number={'07'}
-                title={'contact'}
+                title={'Contact'}
                 id="heading-06"
               />
               <Layout.Container>

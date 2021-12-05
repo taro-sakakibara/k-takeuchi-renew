@@ -10,7 +10,7 @@ import {
 } from '@/elements/index'
 import { useState } from 'react'
 
-const List = styled.div`
+const List = styled.ul`
   ${tw`
 border-t-[1px] border-dotted border-transparentGray
 `}
@@ -127,8 +127,9 @@ export const Collapse: React.FC = () => {
           <Text text="初心者の方も大歓迎です。担当講師はていねいな指導をモットーとしています。変な癖をつけないため、最初からプロに学ぶことをオススメしています。他にも、下記のような方が受講可能です。" />
           <ul className="leading-[calc(80/32)]">
             <DottedText as="li" text="ミュージシャンではない初心者・経験者" />
-            <DottedText as="li" text="ミュージシャンではない初心者・経験者" />
-            <DottedText as="li" text="ミュージシャンではない初心者・経験者" />
+            {/* prettier-ignore */}
+            <DottedText as="li" text="バンドをやりたい、活動しているアマチュア"/>
+            <DottedText as="li" text="ロックやJAZZをやりたい方・はじめたい方" />
           </ul>
         </>
       ),
