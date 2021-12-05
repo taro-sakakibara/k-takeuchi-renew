@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     fontFamily: {
       body: ['Noto Sans', 'sans-serif'],
-      en: ['classico-urw', 'sans-serif'],
+      en: ['Classico URW', 'sans-serif'],
     },
     colors: {
       black: '#333333',
