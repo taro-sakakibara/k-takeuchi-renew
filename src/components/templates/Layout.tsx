@@ -1,4 +1,5 @@
 import tw, { styled } from 'twin.macro'
+import { reverseBgColorAnimation01, reverseBgColorAnimation02 } from './Animate'
 
 interface Props {
   children: JSX.Element
@@ -8,6 +9,7 @@ interface Props {
   paddingTopPc?: number
   bgGray?: boolean
   className?: string
+  id?: string
 }
 
 const StyledWrapper = styled.section<Props>`
@@ -16,7 +18,7 @@ relative
 md:px-[50px]
 `}
   color:${({ bgGray }) => bgGray && `#fff`};
-  background-color: ${({ bgGray }) => bgGray && `#666666`};
+  // background-color: ${({ bgGray }) => bgGray && `#666666`};
   padding-bottom: ${({ paddingBottomSp }) =>
     paddingBottomSp && `calc(${paddingBottomSp}/750*100vw)`};
   @media (min-width: 769px) {
@@ -56,7 +58,13 @@ export function Wrapper({
   paddingTopSp,
   paddingTopPc,
   className,
+  id,
 }: Props) {
+  id == 'reverse-bg-color-section01'
+    ? reverseBgColorAnimation01()
+    : id == 'reverse-bg-color-section02'
+    ? reverseBgColorAnimation02()
+    : null
   return (
     <StyledWrapper
       className={className}
@@ -65,6 +73,7 @@ export function Wrapper({
       paddingBottomPc={paddingBottomPc}
       paddingTopSp={paddingTopSp}
       paddingTopPc={paddingTopPc}
+      id={id}
     >
       {children}
     </StyledWrapper>
@@ -78,6 +87,7 @@ export function Inner({ children }: Props) {
 export function Container({ children }: Props) {
   return <StyledContainer>{children}</StyledContainer>
 }
+
 Layout.Wrapper = Wrapper
 Layout.Inner = Inner
 Layout.Container = Container
