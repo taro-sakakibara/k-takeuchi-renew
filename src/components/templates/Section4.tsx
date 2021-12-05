@@ -14,7 +14,7 @@ export const Section4: React.FC = () => {
         <>
           <Layout.Inner>
             <>
-              <Heading2 number={'04'} title={'FAQ'} id="heading-04" />
+              <Heading2 number={'04'} title={'Faq'} id="heading-04" />
               <Layout.Container>
                 <Collapse />
               </Layout.Container>
