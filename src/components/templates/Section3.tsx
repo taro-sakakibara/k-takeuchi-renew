@@ -12,6 +12,7 @@ export const Section3: React.FC = () => {
         paddingTopSp={350}
         paddingBottomSp={230}
         paddingBottomPc={270}
+        id="reverse-bg-color-section01"
       >
         <>
           <Layout.Inner>

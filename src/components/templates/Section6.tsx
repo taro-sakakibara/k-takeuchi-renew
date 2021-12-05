@@ -11,6 +11,7 @@ export const Section6: React.FC = () => {
         paddingTopSp={390}
         paddingBottomSp={140}
         paddingBottomPc={90}
+        id="reverse-bg-color-section02"
       >
         <>
           <ParallaxTop />
