@@ -2,7 +2,7 @@ const Concept: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 116 25"
+      viewBox="0 0 116 30"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[61px] md:h-[14px]
@@ -31,7 +31,7 @@ const Lesson: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 94 24"
+      viewBox="0 0 94 29"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[48px] md:h-[14px]
@@ -60,7 +60,7 @@ const Contact: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 109 24"
+      viewBox="0 0 109 29"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[58px] md:h-[14px]
@@ -88,7 +88,7 @@ const Faq: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 62 24"
+      viewBox="0 0 62 29"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[30px] md:h-[14px]
@@ -116,7 +116,7 @@ const Corse: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 82 24"
+      viewBox="0 0 82 29"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[42px] md:h-[14px]
@@ -144,7 +144,7 @@ const Instructor: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 134 24"
+      viewBox="0 0 134 29"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[72px] md:h-[14px]
