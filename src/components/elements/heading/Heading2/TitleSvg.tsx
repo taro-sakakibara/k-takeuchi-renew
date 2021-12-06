@@ -2,13 +2,11 @@ const Concept: React.FC = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="106"
-      height="25"
       viewBox="0 0 106 25"
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[61px] md:h-[14px]
-			sp:w-[calc(106/750*100vw)] sp:h-[calc(25/750*100vw)]
+			sp:h-[calc(25/750*100vw)]
 			"
     >
       <text
@@ -37,7 +35,7 @@ const Lesson: React.FC = () => {
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[48px] md:h-[14px]
-			sp:w-[calc(84/750*100vw)] sp:h-[calc(24/750*100vw)]
+			sp:h-[calc(24/750*100vw)]
 			"
     >
       <text
@@ -66,7 +64,7 @@ const Contact: React.FC = () => {
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[58px] md:h-[14px]
-			sp:w-[calc(99/750*100vw)] sp:h-[calc(24/750*100vw)]
+			sp:h-[calc(24/750*100vw)]
 			"
     >
       <text
@@ -94,7 +92,7 @@ const Faq: React.FC = () => {
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[30px] md:h-[14px]
-			sp:w-[calc(52/750*100vw)] sp:h-[calc(24/750*100vw)]
+			sp:h-[calc(24/750*100vw)]
 			"
     >
       <text
@@ -122,7 +120,7 @@ const Corse: React.FC = () => {
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[42px] md:h-[14px]
-			sp:w-[calc(72/750*100vw)] sp:h-[calc(24/750*100vw)]
+			sp:h-[calc(24/750*100vw)]
 			"
     >
       <text
@@ -150,7 +148,7 @@ const Instructor: React.FC = () => {
       className="
 			md:transform md:translate-y-[150%] md:rotate-[-90deg]
 			md:w-[72px] md:h-[14px]
-			sp:w-[calc(124/750*100vw)] sp:h-[calc(24/750*100vw)]
+			sp:h-[calc(24/750*100vw)]
 			"
     >
       <text
